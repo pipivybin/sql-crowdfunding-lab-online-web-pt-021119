@@ -43,10 +43,11 @@ ORDER BY SUM(amount), name;"
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
-"SELECT
-FROM
-INNER JOIN
-ON
+"SELECT category, SUM(amount)
+FROM projects
+INNER JOIN pledges
+ON projects.id = pledges.project_id
+
 "
 end
 
