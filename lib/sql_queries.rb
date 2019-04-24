@@ -21,7 +21,7 @@ FROM users
 INNER JOIN pledges
 ON users.id = pledges.user_id
 GROUP BY pledges.amount
-ORDER BY users.name"
+ORDER BY users.name;"
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
